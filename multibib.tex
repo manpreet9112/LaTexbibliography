@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[sorting=none]{biblatex}
+
+\usepackage{filecontents}
+
+\begin{filecontents}{\jobname.bib}
+@misc{A01,
+  author = {Author, A.},
+  year = {2001},
+  title = {Alpha},
+}
+@misc{B02,
+  author = {Buthor, B.},
+  year = {2002},
+  title = {Bravo},
+}
+@misc{C03,
+  keywords = {pub},
+  author = {Cuthor, C.},
+  year = {2003},
+  title = {Charlie},
+}
+@misc{Z00,
+  keywords = {pub},
+  author = {Zuthor, Z.},
+  year = {2000},
+  title = {Zulu},
+}
+@misc{key,
+%  keywords = {pub},
+  author = {peter,Seann},
+  year = {1998},
+  title = {PS},
+}
+
+
+
+\end{filecontents}
+
+\addbibresource{\jobname.bib}
+
+\begin{document}
+
+Some text \autocite{B02,A01,key}.
+
+\nocite{Z00,C03}
+
+\printbibliography[title={Reference list},notkeyword=pub]
+
+\printbibliography[title={List of publications},keyword=pub]
+
+\end{document}
