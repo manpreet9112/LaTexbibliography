@@ -1,0 +1,39 @@
+\documentclass{article}
+%\usepackage{natbib}
+
+	
+\begin{document}
+
+this is a bibligraphy using bibtex
+\cite{4562000}
+
+
+% %=== only work with (unsrtnat,apalike,plainnat)====== % %
+%author: \citeauthor{4562000}\\
+%\textbf{year}:\citeyear{4562000}\\
+%\citep{key}\\
+%\citealp{key}\\
+%\citeyear{key}\\
+%\citeyearpar{key}\\
+%\Citet{key}
+
+
+%=================different style=================%
+%\bibliographystyle{acm}           %% show authoname in capital at the end.
+
+%\bibliographystyle{plainnat}     %% By dafault author year style and in year in square brace.
+
+%\bibliographystyle{unsrtnat}     %% show authoryear style in square brackets.
+  
+%\bibliographystyle{plain}  %% show subscript in suqare brace.
+	
+\bibliographystyle{ieeetr}        %% show only subscript in round brace
+
+%\bibliographystyle{chicago}      %% not worked
+
+%\bibliographystyle{alpha}        %% show shortform alphabetically
+
+%\bibliographystyle{apalike}      %% this style is used to show author year in round brace individually but with natbib
+
+\bibliography{bibdata}
+\end{document}

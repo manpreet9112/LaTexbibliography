@@ -1,0 +1,68 @@
+\RequirePackage{filecontents}
+\begin{filecontents*}{jobname.bib}
+@book{is4562000,
+ title={Indian Standard Plain and reinforced concrete--code of
+         practice (IS 456 : 2000)},
+ shorttitle = {IS 456~:~2000},
+ author={{Cement and Concrete Sectional Committee, CED 2}},
+ journal={New Delhi: },
+ year={2000},
+ publisher={Bureau of Indian Standards},	
+ }
+ 	
+
+@book{is555,
+     title = {IS 555~:~1980}
+     }
+\end{filecontents*}
+
+\documentclass[a4paper,10pt]{article}
+
+%%==Different bibliography styles with biblatex==%%
+%%===============================================%%
+%authoreyear-icomp,apa,bwl-FU,chem-acs,chem-angew,chem-biochem
+%chem-rsc,mla,musuos,nature,phys,science,geschichtsfrkl,oscola
+
+
+\usepackage[backend=biber,
+  style=ieee]{biblatex}
+		
+%\usepackage[backend=biber,
+ % style=authoryear]{biblatex}
+
+%\usepackage[backend=biber,
+ %  style=authortitle]{biblatex}
+
+%\usepackage[backend=biber,
+ %  style=alphabetic]{biblatex}
+
+%\usepackage[backend=biber,
+	 % style=authortitle]{biblatex}
+
+%%\usepackage[backend=biber,	
+  % style=verbose]{biblatex}
+
+%\usepackage[backend=biber, %%show simple number style 
+%   style=nejm]{biblatex}
+
+	
+%\usepackage[backend=biber,
+ % style=numeric]{biblatex}
+
+\addbibresource{jobname.bib}
+\begin{document}
+This is bibliography using biblatex \cite{is4562000}.
+
+\citetitle{is4562000}.	
+
+\citeyear{is4562000}.
+
+\citeauthor{is4562000}.
+
+\citetitle{is555}
+\printbibliography
+
+\end{document}	
+
+
+%%=====https://www.sharelatex.com/learn/Biblatex_bibliography_styles
